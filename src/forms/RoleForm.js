@@ -8,10 +8,8 @@ import {
   FormControl,
   FormControlLabel,
   FormGroup,
-  FormHelperText,
   FormLabel,
   Grid,
-  InputLabel,
   Switch,
   TextField
 } from "@material-ui/core";

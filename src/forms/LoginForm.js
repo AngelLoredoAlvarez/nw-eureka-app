@@ -42,17 +42,7 @@ export const LoginForm = ({ authenticate }) => (
         validationSchema={validationSchema}
       >
         {props => {
-          const {
-            values,
-            touched,
-            errors,
-            dirty,
-            isSubmitting,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            handleReset
-          } = props;
+          const { values, touched, errors, handleChange, handleSubmit } = props;
 
           return (
             <form onSubmit={handleSubmit}>

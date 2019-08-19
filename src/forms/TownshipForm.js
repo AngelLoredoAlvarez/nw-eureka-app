@@ -1,15 +1,7 @@
 import React from "react";
 import { Formik } from "formik";
-import {
-  Button,
-  DialogContent,
-  DialogActions,
-  FormControl,
-  Grid,
-  TextField
-} from "@material-ui/core";
+import { Button, DialogContent, DialogActions } from "@material-ui/core";
 import * as Yup from "yup";
-import InputMask from "react-input-mask";
 import { TownshipInformation } from "../components/TownshipInformation";
 
 const validationSchema = Yup.object({

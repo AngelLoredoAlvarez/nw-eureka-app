@@ -39,18 +39,7 @@ export const RenovateContractForm = ({
     validationSchema={validationSchema}
   >
     {props => {
-      const {
-        values,
-        touched,
-        errors,
-        dirty,
-        isSubmitting,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-        handleReset,
-        setFieldValue
-      } = props;
+      const { touched, errors, handleSubmit, setFieldValue } = props;
 
       return (
         <form onSubmit={handleSubmit}>
