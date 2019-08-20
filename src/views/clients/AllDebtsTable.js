@@ -6,6 +6,7 @@ import { GraphQLError } from "../../components/GraphQLError";
 import { NetworkError } from "../../components/NetworkError";
 import MaterialDatatable from "material-datatable";
 import { CollectContractDebt } from "./CollectContractDebt";
+import { CustomToolbarDebts } from "./CustomToolbarDebts";
 
 export const AllDebtsTable = () => (
   <Query query={ALL_CLIENTS_DEBTS}>
@@ -95,6 +96,7 @@ export const AllDebtsTable = () => (
             ]}
             data={allClientsDebts.edges}
             options={{
+              customToolbar: () => <CustomToolbarDebts />,
               download: false,
               filter: false,
               print: false,
