@@ -19,7 +19,7 @@
     "apollo-link-state": "^0.4.2",
     "classnames": "^2.2.6",
     "formik": "^1.5.8",
-    "graphql": "^14.4.2",
+    "graphql": "^14.5.0",
     "graphql-anywhere": "^4.2.4",
     "graphql-tag": "^2.10.1",
     "material-datatable": "^0.3.9",
@@ -55,12 +55,21 @@
   ],
   "main": "index.html",
   "window": {
-    "title": "Eureka"
+    "title": "Eureka ¡Lo encontré!",
+    "icon": "icon.png",
+    "toolbar": true,
+    "resizable": true,
+    "frame": true,
+    "fullscreen": false,
+    "width": 1024,
+    "height": 600,
+    "min_width": 800,
+    "min_height": 600,
+    "position": "center"
   },
   "nwBuilder": {
     "//": "https://github.com/nwjs-community/nw-builder",
     "platforms": [
-      "osx64",
       "win32",
       "win64"
     ],
