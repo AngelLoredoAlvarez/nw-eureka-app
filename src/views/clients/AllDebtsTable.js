@@ -96,7 +96,9 @@ export const AllDebtsTable = () => (
             ]}
             data={allClientsDebts.edges}
             options={{
-              customToolbar: () => <CustomToolbarDebts />,
+              customToolbar: () => (
+                <CustomToolbarDebts allClientsDebts={allClientsDebts.edges} />
+              ),
               download: false,
               filter: false,
               print: false,

@@ -2,14 +2,9 @@ import React, { useRef } from "react";
 import { IconButton, Tooltip } from "@material-ui/core";
 import { Print } from "@material-ui/icons";
 import ReactToPrint from "react-to-print";
+import { AllDebtsTableToPrint } from "./AllDebtsTableToPrint";
 
-class ComponentToPrint extends React.Component {
-  render() {
-    return <button>Angel</button>;
-  }
-}
-
-export const CustomToolbarDebts = () => {
+export const CustomToolbarDebts = ({ allClientsDebts }) => {
   const componentRef = useRef();
 
   return (
@@ -25,7 +20,12 @@ export const CustomToolbarDebts = () => {
         content={() => componentRef.current}
       />
 
-      <ComponentToPrint ref={componentRef} />
+      <div style={{ display: "none" }}>
+        <AllDebtsTableToPrint
+          allClientsDebts={allClientsDebts}
+          ref={componentRef}
+        />
+      </div>
     </>
   );
 };

@@ -22,29 +22,27 @@ export const CommonInformationForm = ({
   <div>
     <Grid container={true} direction="row" item={true} spacing={8} xs={12}>
       <Grid item={true} xs={4}>
-        <FormControl fullWidth={true}>
-          <InputMask
-            alwaysShowMask={true}
-            disabled={disableAdmin}
-            formatChars={{ "?": "[a-zA-ZáéíóúñÁÉÍÓÚÑ\\s]" }}
-            mask="????????????????????"
-            maskChar=""
-            onChange={handleChange}
-            value={values.name}
-          >
-            {inputProps => (
-              <TextField
-                autoFocus={true}
-                error={errors.name && touched.name ? true : false}
-                helperText={errors.name && touched.name ? `${errors.name}` : ""}
-                id="name"
-                {...inputProps}
-                label="Nombre(s)"
-                name="name"
-              />
-            )}
-          </InputMask>
-        </FormControl>
+        <InputMask
+          alwaysShowMask={true}
+          disabled={disableAdmin}
+          formatChars={{ "?": "[a-zA-ZáéíóúñÁÉÍÓÚÑ\\s]" }}
+          mask="????????????????????"
+          maskChar=""
+          onChange={handleChange}
+          value={values.name}
+        >
+          {inputProps => (
+            <TextField
+              autoFocus={true}
+              error={errors.name && touched.name ? true : false}
+              helperText={errors.name && touched.name ? `${errors.name}` : ""}
+              id="name"
+              {...inputProps}
+              label="Nombre(s)"
+              name="name"
+            />
+          )}
+        </InputMask>
       </Grid>
       <Grid item={true} xs={4}>
         <FormControl fullWidth={true}>
